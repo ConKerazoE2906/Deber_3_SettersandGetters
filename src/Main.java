@@ -5,40 +5,38 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
-
-        System.out.println("\tBienvenidos al sistema de calificaciones");
         ArrayList<Estudiantes> estudiantes = new ArrayList<>();
+        System.out.println("\nBienvenidos al sistema de calificaciones");
+
         for (int i = 0; i < 10; i++) {
-            System.out.println("Ingrese el nombre del estudiante " + (i+1) + ": ");
+            System.out.println("\n\t\t\t\tESTUDIANTE "+(i+1));
+            System.out.print("Ingrese el nombre del estudiante: ");
             String nombre = entrada.nextLine();
 
-            System.out.println("Ingrese el apellido del estudiante " + (i+1) + ": ");
+            System.out.print("Ingrese el apellido del estudiante: ");
             String apellido = entrada.nextLine();
 
-            System.out.println("Ingrese la carrera del estudiante " + (i+1) + ": ");
+            System.out.print("Ingrese la carrera del estudiante: ");
             String carrera = entrada.nextLine();
 
-            System.out.println("Ingrese el código único del estudiante " + (i+1) + ": ");
-            int codigo_unico = entrada.nextInt();
-
-            System.out.println("Ingrese las calificaciones del estudiante " + (i+1) + ": ");
+            System.out.print("Ingrese las calificaciones del estudiante: ");
             double calificaciones = entrada.nextDouble();
 
             entrada.nextLine();
 
-            Estudiantes estudiante = new Estudiantes(nombre, apellido, carrera, codigo_unico, calificaciones);
+            Estudiantes estudiante = new Estudiantes(nombre, apellido, carrera, calificaciones);
             estudiantes.add(estudiante);
         }
 
-        System.out.println("\nDatos de los estudiantes:");
+        System.out.println("\n\tDatos de los estudiantes");
         for (Estudiantes estudiante : estudiantes) {
             System.out.println("Nombre: " + estudiante.getNombre());
             System.out.println("Apellido: " + estudiante.getApellido());
             System.out.println("Carrera: " + estudiante.getCarrera());
-            System.out.println("Código único: " + estudiante.getCodigo_unico());
             System.out.println("Calificaciones: " + estudiante.getCalificaciones());
             System.out.println();
         }
+
 
         System.out.println("Ingrese el número del estudiante que desea modificar la calificacion: ");
         int numero_estudiante = entrada.nextInt();
@@ -53,9 +51,10 @@ public class Main {
             System.out.println("Nombre: " + estudiante.getNombre());
             System.out.println("Apellido: " + estudiante.getApellido());
             System.out.println("Carrera: " + estudiante.getCarrera());
-            System.out.println("Código único: " + estudiante.getCodigo_unico());
             System.out.println("Calificaciones: " + estudiante.getCalificaciones());
             System.out.println();
         }
+
+
     }
 }

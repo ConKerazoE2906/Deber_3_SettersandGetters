@@ -1,16 +1,13 @@
 public class Estudiantes {
-
         String nombre;
         String apellido;
         String carrera;
-        int codigo_unico;
         double calificaciones;
 
-    public Estudiantes(String nombre, String apellido, String carrera, int codigo_unico, double calificaciones) {
+    public Estudiantes(String nombre, String apellido, String carrera, double calificaciones) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.carrera = carrera;
-        this.codigo_unico = codigo_unico;
         this.calificaciones = calificaciones;
     }
 
@@ -36,14 +33,6 @@ public class Estudiantes {
 
     public void setCarrera(String carrera) {
         this.carrera = carrera;
-    }
-
-    public int getCodigo_unico() {
-        return codigo_unico;
-    }
-
-    public void setCodigo_unico(int codigo_unico) {
-        this.codigo_unico = codigo_unico;
     }
 
     public double getCalificaciones() {
